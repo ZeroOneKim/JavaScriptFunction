@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>java script3</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1>함수의 이해</h1>
+       <ul>
+            <script>
+            function two() {
+                document.write('<li>2-1</li>');
+                document.write('<li>2-2</li>');
+            }
+            document.write('<li>1</li>');
+            two();
+            document.write('<li>3</li>');
+            two();
+            </script>
+        </ul>
+        함수는 스크립트 내에서 호출하고 만들어진다.<br>
+        <script>
+        function add(m, n) { /*값을 받아서 함수안으로 매개해주는 변수 m,n은 매개변수(Parameter)라고 한다.*/
+            document.write('<div style="color:red">'+m+n,'</div>');
+        } /*매개변수와 인자는 입력 출력의 개념을 가지고 있음.*/
+        add(5, 7);
+        add(1, 2); /*1과 2와 같은 값은 인자(argument)라고 부른다.*/
+        </script> <hr>
+        <h2>Object (객체_)</h2>
+        객체는 중괄호, 배열은 대괄호를 사용한다.<br>
+        <script>
+            var work = {
+                "programmer":"Yungil" ,
+                "SoccerPlayer":"SonHeungMin"
+            };
+            document.write("programmer: "+work.programmer ,'<br>');
+            document.write("SoccerPlayer: "+work.SoccerPlayer,'<br>');
+            work.gamer = "Faker";   /*삽입의 여러가지*/
+            work["actor"] = "ParkBoYoung"; /*배열의 삽입*/
+            document.write("gamer : "+work.gamer, '<br>');
+            document.write("actor : "+work.actor, '<br>');
+        </script> <hr>
+        <h2>Iterate</h2>
+        <script> /*key값의 이해*/
+            for(var key in work) {
+                document.write(key, ' : ' , work[key],'<br>');
+            }
+        </script><br><br>
+
+
+    </body>
+</html>
